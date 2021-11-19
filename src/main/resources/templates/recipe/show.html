@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Show Recipe</title>
+</head>
+<body>
+  <div align="center">
+    <table cellpadding="5" border="1" class="styled-table">
+      <tr>
+        <th>ID</th>
+        <th>PrepTime</th>
+        <th>CookTime</th>
+        <th>Notes</th>
+        <th>Directions</th>
+      </tr>
+
+      <tr class="active-row">
+        <td th:text="${recipe.id}">ID</td>
+        <td th:text="${recipe.prepTime}">PrepTime</td>
+        <td th:text="${recipe.cookTime}">CookTime</td>
+        <td th:text="${recipe.notes.recipeNotes}">Recipe Notes</td>
+        <td th:text="${recipe.directions}">Directions</td>
+      </tr>
+    </table>
+
+    <button type="button" class="btn btn-secondary"><a th:href="@{'/index'}">Go Back</a></button>
+  </div>
+</body>
+</html>
