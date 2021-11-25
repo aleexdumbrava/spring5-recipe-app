@@ -77,7 +77,6 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
         perfectGuacamole.setUrl("https://www.simplyrecipes.com/recipes/perfect_guacamole/");
         perfectGuacamole.setSource("Elise Bauer");
         Notes perfectGuacamoleNotes = new Notes();
-        perfectGuacamoleNotes.setRecipe(perfectGuacamole);
         perfectGuacamoleNotes.setRecipeNotes("Be careful handling chilis! If using, it's best to wear food-safe gloves. " +
                 "If no gloves are available, wash your hands thoroughly after handling, " +
                 "and do not touch your eyes or the area near your eyes for several hours afterwards.");
@@ -100,15 +99,15 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
         Ingredient redRadish = new Ingredient("Red radish or jicama slices for garnish (optional)", new BigDecimal(1),
                 perfectGuacamole, eachUom);
 
-        perfectGuacamole.getIngredients().add(ripeAvocado);
-        perfectGuacamole.getIngredients().add(salt);
-        perfectGuacamole.getIngredients().add(freshLime);
-        perfectGuacamole.getIngredients().add(onion);
-        perfectGuacamole.getIngredients().add(jalapeno);
-        perfectGuacamole.getIngredients().add(cilantro);
-        perfectGuacamole.getIngredients().add(blackPepper);
-        perfectGuacamole.getIngredients().add(ripeTomato);
-        perfectGuacamole.getIngredients().add(redRadish);
+        perfectGuacamole.addIngredient(ripeAvocado);
+        perfectGuacamole.addIngredient(salt);
+        perfectGuacamole.addIngredient(freshLime);
+        perfectGuacamole.addIngredient(onion);
+        perfectGuacamole.addIngredient(jalapeno);
+        perfectGuacamole.addIngredient(cilantro);
+        perfectGuacamole.addIngredient(blackPepper);
+        perfectGuacamole.addIngredient(ripeTomato);
+        perfectGuacamole.addIngredient(redRadish);
 
         recipes.add(perfectGuacamole);
 
@@ -120,9 +119,10 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
         spicyGrilledChicken.setPrepTime(20);
         spicyGrilledChicken.setCookTime(15);
         spicyGrilledChicken.setServings(4);
-        spicyGrilledChicken.setNotes(new Notes(spicyGrilledChicken, "Look for ancho chile powder with the Mexican ingredients at your grocery store, on buy it online. " +
+        Notes spicyGrilledChickenNotes = new Notes(spicyGrilledChicken, "Look for ancho chile powder with the Mexican ingredients at your grocery store, on buy it online. " +
                 "(If you can't find ancho chili powder, you replace the ancho chili, the oregano, " +
-                "and the cumin with 2 1/2 tablespoons regular chili powder, though the flavor won't be quite the same.)"));
+                "and the cumin with 2 1/2 tablespoons regular chili powder, though the flavor won't be quite the same.)");
+        spicyGrilledChicken.setNotes(spicyGrilledChickenNotes);
         spicyGrilledChicken.setDifficulty(Difficulty.MODERATE);
         Optional<Category> americanCategoryOptional = categoryRepository.findByDescription("American");
         Category americanCategory = americanCategoryOptional.get();
@@ -141,16 +141,16 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
         Ingredient oliveOil = new Ingredient("olive oil", new BigDecimal(2), spicyGrilledChicken, tableSpoonUom);
         Ingredient chickenThighs = new Ingredient("skinless, boneless chicken thighs (1 1/4 pounds)", new BigDecimal(4), spicyGrilledChicken, eachUom);
 
-        spicyGrilledChicken.getIngredients().add(chiliPowder);
-        spicyGrilledChicken.getIngredients().add(cumin);
-        spicyGrilledChicken.getIngredients().add(oregano);
-        spicyGrilledChicken.getIngredients().add(sugar);
-        spicyGrilledChicken.getIngredients().add(saltChicken);
-        spicyGrilledChicken.getIngredients().add(garlic);
-        spicyGrilledChicken.getIngredients().add(orangeZest);
-        spicyGrilledChicken.getIngredients().add(orangeJuice);
-        spicyGrilledChicken.getIngredients().add(oliveOil);
-        spicyGrilledChicken.getIngredients().add(chickenThighs);
+        spicyGrilledChicken.addIngredient(chiliPowder);
+        spicyGrilledChicken.addIngredient(cumin);
+        spicyGrilledChicken.addIngredient(oregano);
+        spicyGrilledChicken.addIngredient(sugar);
+        spicyGrilledChicken.addIngredient(saltChicken);
+        spicyGrilledChicken.addIngredient(garlic);
+        spicyGrilledChicken.addIngredient(orangeZest);
+        spicyGrilledChicken.addIngredient(orangeJuice);
+        spicyGrilledChicken.addIngredient(oliveOil);
+        spicyGrilledChicken.addIngredient(chickenThighs);
 
         recipes.add(spicyGrilledChicken);
 
