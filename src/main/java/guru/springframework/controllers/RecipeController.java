@@ -62,4 +62,5 @@ public class RecipeController {
 
         return "redirect:/index";
     }
+
 }

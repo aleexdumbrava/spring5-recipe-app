@@ -86,6 +86,9 @@
                     </div>
                     <div class="panel-body">
                         <div class="row">
+                            <div class="col-md-1">
+                                <a class="btn btn-default" th:href="@{'/recipe/' + ${recipe.id} + '/ingredients'}" role="button">View</a>
+                            </div>
                             <div class="col-md-12">
                                 <ul>
                                     <li th:each="ingredient : ${recipe.ingredients}"
@@ -93,6 +96,8 @@
                                         ${ingredient.description}">Ingredient Description</li>
                                 </ul>
                             </div>
+
+
                         </div>
                     </div>
                 </div>
@@ -115,7 +120,7 @@
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-md-12">
-                                <p th:text="${recipe.notes}">Notes</p>
+                                <p th:text="${recipe.notes.getRecipeNotes()}">Notes</p>
                             </div>
                         </div>
                     </div>
