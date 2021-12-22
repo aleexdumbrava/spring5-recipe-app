@@ -68,8 +68,7 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
 
 
         Recipe perfectGuacamole = new Recipe();
-        perfectGuacamole.setDescription("The best guacamole keeps it simple: just ripe avocados, salt, a squeeze of lime, onions, chilis, cilantro, and some chopped tomato. " +
-                "Serve it as a dip at your next party or spoon it on top of tacos for an easy dinner upgrade.");
+        perfectGuacamole.setDescription("Perfect Guacamole");
         perfectGuacamole.setCookTime(0);
         perfectGuacamole.setPrepTime(10);
         perfectGuacamole.setDifficulty(Difficulty.EASY);
@@ -114,8 +113,7 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
         Recipe spicyGrilledChicken = new Recipe();
         spicyGrilledChicken.setUrl("https://www.simplyrecipes.com/recipes/spicy_grilled_chicken_tacos/");
         spicyGrilledChicken.setSource("Sally Vargas");
-        spicyGrilledChicken.setDescription("Spicy grilled chicken tacos! Quick marinade, then grill. Ready in about 30 minutes. " +
-                "Great for a quick weeknight dinner, backyard cookouts, and tailgate parties.");
+        spicyGrilledChicken.setDescription("Spicy Grilled Chicken");
         spicyGrilledChicken.setPrepTime(20);
         spicyGrilledChicken.setCookTime(15);
         spicyGrilledChicken.setServings(4);

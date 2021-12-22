@@ -32,20 +32,20 @@
                                 <tr class="table-dark">
                                     <th>ID</th>
                                     <th>Description</th>
-                                    <th>Url</th>
                                     <th>Difficulty</th>
                                     <th>View</th>
                                     <th>Update</th>
+                                    <th>Delete</th>
                                 </tr>
                                 </thead>
 
                                 <tr class="table-active" th:each="recipe : ${recipes}">
                                     <td th:text="${recipe.id}">ID</td>
                                     <td th:text="${recipe.description}">Description</td>
-                                    <td th:text="${recipe.url}">URL</td>
                                     <td th:text="${recipe.difficulty}">Difficulty</td>
                                     <td><a th:href="@{'/recipe/' + ${recipe.id} + '/show'}">View</a></td>
                                     <td><a th:href="@{'/recipe/' + ${recipe.id} + '/update'}">Update</a></td>
+                                    <td><a th:href="@{'/recipe/' + ${recipe.id} + '/delete'}">Delete</a></td>
                                 </tr>
                             </table>
                         </div>
