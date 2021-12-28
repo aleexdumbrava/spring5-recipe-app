@@ -41,9 +41,9 @@
                             <tr class="table-active" th:each="ingredient : ${recipe.ingredients}">
                                 <td th:text="${ingredient.id}">ID</td>
                                 <td th:text="${ingredient.description}">Description</td>
-                                <td><a th:href="@{'/recipe/' + ${recipe.id} + '/ingredients/' + ${ingredient.id} + '/show'}">View</a></td>
-                                <td><a th:href="@{'/recipe/' + ${recipe.id} + '/ingredients/' + ${ingredient.id} + '/update'}">Update</a></td>
-                                <td><a th:href="@{'/recipe/' + ${recipe.id} + '/ingredients/' + ${ingredient.id} + '/delete'}">Delete</a></td>
+                                <td><a th:href="@{'/recipe/' + ${recipe.id} + '/ingredient/' + ${ingredient.id} + '/show'}">View</a></td>
+                                <td><a th:href="@{'/recipe/' + ${recipe.id} + '/ingredient/' + ${ingredient.id} + '/update'}">Update</a></td>
+                                <td><a th:href="@{'/recipe/' + ${recipe.id} + '/ingredient/' + ${ingredient.id} + '/delete'}">Delete</a></td>
                             </tr>
                         </table>
                     </div>
