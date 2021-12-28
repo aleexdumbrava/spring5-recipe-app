@@ -36,11 +36,6 @@ public class IngredientToIngredientCommandTest {
     }
 
     @Test
-    public void testEmptyObject() throws Exception {
-        assertNotNull(converter.convert(new Ingredient()));
-    }
-
-    @Test
     public void testConvertNullUOM() throws Exception {
         //given
         Ingredient ingredient = new Ingredient();
